@@ -9,7 +9,7 @@
 data "archive_file" "zip_file_for_lambda" {
   type        = "zip"
   output_path = "${var.local_file_dir}/${var.name}.zip"
-
+  source_dir = var.file_globs != "" ? var.lambda_code_source_dir : null
   dynamic "source" {
     for_each = distinct(flatten([
       for blob in var.file_globs :
