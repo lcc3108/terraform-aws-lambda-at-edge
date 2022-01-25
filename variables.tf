@@ -92,3 +92,9 @@ variable ssm_params {
   in your lambda .zip file. These params will need to be fetched via a Promise at runtime, so there may be small performance delays.
   EOF
 }
+
+variable timeout {
+  type = number
+  description = "Lambda timeout default 3s"
+  default     = 3
+}
