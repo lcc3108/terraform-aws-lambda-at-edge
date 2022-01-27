@@ -67,6 +67,7 @@ resource "aws_lambda_function" "lambda" {
   role    = aws_iam_role.lambda_at_edge.arn
   tags    = var.tags
   timeout = var.timeout
+  memory_size = var.memory_size
 
   lifecycle {
     ignore_changes = [

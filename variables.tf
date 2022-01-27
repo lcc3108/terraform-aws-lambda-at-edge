@@ -98,3 +98,9 @@ variable timeout {
   description = "Lambda timeout default 3s"
   default     = 3
 }
+
+variable memory_size {
+  type        = number
+  default     = 128
+  description = "memory size default 128"
+}
